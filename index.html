@@ -1,162 +1,1106 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Diya Nabiha - Game Developer</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-</head>
-<body class="bg-[#E6E0F8] text-[#1E1B4B] font-sans">
 
-  <!-- Navbar -->
-  <nav class="fixed w-full bg-[#E6E0F8]/90 backdrop-blur-md shadow-md z-50">
+  <title>Diya Nabiha - Game Developer</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: #E6E0F8;
+      color: #1E1B4B;
+    }
+
+    .project-card {
+      transition: all 0.3s ease;
+    }
+
+    .project-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 40px rgba(30, 27, 75, 0.15);
+    }
+
+    .video-overlay {
+      background: rgba(0, 0, 0, 0.8);
+    }
+
+    .fade-in {
+      animation: fadeIn 0.8s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ================= NAVBAR ================= -->
+
+  <nav class="fixed top-0 left-0 right-0 z-50 bg-[#E6E0F8]/95 backdrop-blur-md shadow-sm">
+
     <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
-      <h1 class="text-2xl font-extrabold bg-gradient-to-r from-[#1E1B4B] to-[#3C2C8C] bg-clip-text text-transparent">Diya Nabiha</h1>
-      <ul class="flex gap-6 text-[#1E1B4B] font-medium">
-        <li><a href="#about" class="hover:text-[#4ADE80] transition">About</a></li>
-        <li><a href="#skills" class="hover:text-[#4ADE80] transition">Skills</a></li>
-        <li><a href="#projects" class="hover:text-[#4ADE80] transition">Projects</a></li>
-        <li><a href="#resume" class="hover:text-[#4ADE80] transition">Resume</a></li>
-        <li><a href="#contact" class="hover:text-[#4ADE80] transition">Contact</a></li>
-      </ul>
+
+      <a href="#home"
+        class="text-2xl font-bold text-[#1E1B4B]">
+        Diya Nabiha
+      </a>
+
+      <div class="hidden md:flex gap-8 font-medium">
+
+        <a href="#about"
+          class="hover:text-[#4ADE80] transition">
+          About
+        </a>
+
+        <a href="#skills"
+          class="hover:text-[#4ADE80] transition">
+          Skills
+        </a>
+
+        <a href="#experience"
+          class="hover:text-[#4ADE80] transition">
+          Experience
+        </a>
+
+        <a href="#projects"
+          class="hover:text-[#4ADE80] transition">
+          Projects
+        </a>
+
+        <a href="#resume"
+          class="hover:text-[#4ADE80] transition">
+          Resume
+        </a>
+
+        <a href="#contact"
+          class="hover:text-[#4ADE80] transition">
+          Contact
+        </a>
+
+      </div>
+
     </div>
+
   </nav>
 
-  <!-- Hero -->
-  <header class="h-screen flex flex-col justify-center items-center text-center relative overflow-hidden" style="background: linear-gradient(to right, #1E1B4B, #3C2C8C, #1E1B4B); color: #E6E0F8;">
-    <!-- Glow blobs -->
-    <div class="absolute bg-[#E6E0F8] opacity-30 w-96 h-96 rounded-full blur-3xl -top-20 -left-20 animate-pulse"></div>
-    <div class="absolute bg-[#D8D0F5] opacity-30 w-96 h-96 rounded-full blur-3xl bottom-0 right-0 animate-bounce"></div>
 
-    <h2 class="text-5xl md:text-6xl font-extrabold mb-4 z-10">Hi, I'm <span style="color:#4ADE80;">Diya Nabiha</span></h2>
-    <h3 class="text-2xl md:text-3xl z-10">Unity Game Developer</h3>
-    <p class="mt-4 max-w-2xl text-lg z-10">
-      Building fun, creative, and interactive gaming experiences in Unity.
-    </p>
-    <a href="#projects" class="mt-8 px-8 py-3 rounded-full shadow-lg transition transform hover:scale-110 z-10" style="background: linear-gradient(to right, #4ADE80, #1E1B4B); color: #E6E0F8;">
-      Explore My Work 🚀
-    </a>
-  </header>
+  <!-- ================= HERO ================= -->
 
-  <!-- About -->
-  <section id="about" class="max-w-6xl mx-auto px-6 py-20 text-center">
-    <h3 class="text-4xl font-bold mb-6 text-[#1E1B4B]">About Me</h3>
-    <p class="text-lg text-[#3C2C8C] max-w-3xl mx-auto leading-relaxed">
-      I am a <span style="color:#171c19; font-weight:600;">recent IT graduate</span> passionate about 
-      <span style="color:#0c0e0d; font-weight:600;">game development</span>. Skilled in Unity, C#, and creative design, 
-      I love building engaging player experiences and solving challenges in game mechanics.
-    </p>
-  </section>
+  <section id="home"
+    class="min-h-screen flex items-center justify-center text-center px-6 pt-24">
 
-  <!-- Skills Section -->
-  <section id="skills" class="py-20 bg-[#D8D0F5]">
-    <div class="max-w-6xl mx-auto px-6">
-      <h2 class="text-4xl font-bold text-center text-[#1E1B4B] mb-12">My Skills</h2>
-      
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        <div class="bg-[#E6E0F8] rounded-2xl shadow-xl p-6 hover:shadow-2xl transition transform hover:-translate-y-2">
-          <h3 class="text-xl font-semibold text-[#1E1B4B] mb-4">💻 Programming</h3>
-          <ul class="space-y-2 text-[#1E1B4B]">
-            <li>✔️ C++ (Intermediate)</li>
-            <li>✔️ C# (Intermediate)</li>
-            <li>✔️ Python (Basic)</li>
-            <li>✔️ HTML & CSS (Intermediate)</li>
-          </ul>
-        </div>
+    <div class="fade-in">
 
-        <div class="bg-[#E6E0F8] rounded-2xl shadow-xl p-6 hover:shadow-2xl transition transform hover:-translate-y-2">
-          <h3 class="text-xl font-semibold text-[#1E1B4B] mb-4">🎮 Game Development</h3>
-          <ul class="space-y-2 text-[#1E1B4B]">
-            <li>✔️ 2D Game Development</li>
-            <li>✔️ UI/UX in Unity</li>
-            <li>✔️ Game Physics & Mechanics</li>
-            <li>✔️ Player Controls & AI</li>
-          </ul>
-        </div>
+      <div
+        class="inline-block px-5 py-2 mb-6 bg-[#1E1B4B] text-[#4ADE80] rounded-full text-sm font-semibold">
 
-        <div class="bg-[#E6E0F8] rounded-2xl shadow-xl p-6 hover:shadow-2xl transition transform hover:-translate-y-2">
-          <h3 class="text-xl font-semibold text-[#1E1B4B] mb-4">🛠️ Tools & Concepts</h3>
-          <ul class="space-y-2 text-[#1E1B4B]">
-            <li>✔️ Git & GitHub</li>
-            <li>✔️ OOP</li>
-            <li>✔️ Data Structures & Algorithms</li>
-            <li>✔️ Software Engineering Principles</li>
-          </ul>
-        </div>
+        Unity Game Developer • 1 Year Professional Experience
+
       </div>
+
+      <h1
+        class="text-5xl md:text-7xl font-bold mb-6 text-[#1E1B4B]">
+
+        Hi, I'm Diya Nabiha 👋
+
+      </h1>
+
+      <h2
+        class="text-2xl md:text-4xl font-semibold mb-6 text-[#3C2C8C]">
+
+        Unity Game Developer
+
+      </h2>
+
+      <p
+        class="max-w-2xl mx-auto text-lg md:text-xl text-[#D8D0F5] leading-relaxed">
+
+        Unity Game Developer with 1 year of professional
+        game development experience, specializing in gameplay
+        mechanics, interactive systems, UI and engaging
+        player experiences.
+
+      </p>
+
+      <div class="mt-10 flex flex-wrap justify-center gap-4">
+
+        <a href="#experience"
+          class="px-7 py-3 bg-[#1E1B4B] text-white rounded-full font-semibold hover:bg-[#3C2C8C] transition">
+
+          View Professional Work
+
+        </a>
+
+        <a href="#projects"
+          class="px-7 py-3 border-2 border-[#1E1B4B] rounded-full font-semibold hover:bg-[#1E1B4B] hover:text-white transition">
+
+          Explore My Projects
+
+        </a>
+
+      </div>
+
     </div>
+
   </section>
 
-  <!-- Projects -->
-  <section id="projects" class="py-20 bg-[#E6E0F8]">
-    <div class="max-w-6xl mx-auto px-6">
-      <h3 class="text-4xl font-bold text-[#1E1B4B] mb-12 text-center">Projects</h3>
-      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
-        <div class="bg-[#D8D0F5] rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition transform hover:-translate-y-3">
-          <img src="Assets/game-1.png" alt="Pixel Adventure" class="w-full h-48 object-cover">
+
+  <!-- ================= ABOUT ================= -->
+
+  <section id="about"
+    class="py-24 px-6">
+
+    <div class="max-w-5xl mx-auto text-center">
+
+      <p
+        class="text-sm font-semibold uppercase tracking-widest text-[#4ADE80] mb-3">
+
+        About Me
+
+      </p>
+
+      <h2
+        class="text-4xl md:text-5xl font-bold mb-8">
+
+        Who I Am
+
+      </h2>
+
+      <p
+        class="text-lg text-[#3C2C8C] max-w-4xl mx-auto leading-relaxed">
+
+        I am an IT graduate and Unity Game Developer with
+        <strong class="text-[#1E1B4B]">
+          1 year of professional game development experience
+        </strong>.
+
+        <br><br>
+
+        I work primarily with
+        <strong class="text-[#1E1B4B]">
+          Unity and C#
+        </strong>
+        and have hands-on experience developing gameplay
+        mechanics, UI systems, mini-games, interactive
+        experiences and player interactions.
+
+        <br><br>
+
+        My professional experience includes working on
+        interactive educational applications, AR experiences,
+        localization systems and multiple Unity mini-games.
+
+        <br><br>
+
+        I enjoy turning ideas into interactive experiences
+        while solving gameplay and technical challenges.
+
+      </p>
+
+    </div>
+
+  </section>
+
+
+  <!-- ================= SKILLS ================= -->
+
+  <section id="skills"
+    class="py-24 px-6 bg-white/30">
+
+    <div class="max-w-6xl mx-auto">
+
+      <div class="text-center mb-14">
+
+        <p class="text-sm font-semibold uppercase tracking-widest text-[#4ADE80] mb-3">
+          My Skills
+        </p>
+
+        <h2 class="text-4xl md:text-5xl font-bold">
+          Skills & Technologies
+        </h2>
+
+      </div>
+
+
+      <div class="grid md:grid-cols-3 gap-8">
+
+
+        <!-- Programming -->
+
+        <div class="bg-white rounded-3xl p-8 shadow-lg">
+
+          <h3 class="text-2xl font-bold mb-6">
+            💻 Programming
+          </h3>
+
+          <div class="space-y-4 text-[#3C2C8C]">
+
+            <div class="flex justify-between">
+              <span>C#</span>
+              <span class="font-semibold">Intermediate</span>
+            </div>
+
+            <div class="flex justify-between">
+              <span>C++</span>
+              <span class="font-semibold">Intermediate</span>
+            </div>
+
+            <div class="flex justify-between">
+              <span>Python</span>
+              <span class="font-semibold">Basic</span>
+            </div>
+
+            <div class="flex justify-between">
+              <span>HTML / CSS</span>
+              <span class="font-semibold">Intermediate</span>
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <!-- Game Development -->
+
+        <div class="bg-white rounded-3xl p-8 shadow-lg">
+
+          <h3 class="text-2xl font-bold mb-6">
+            🎮 Game Development
+          </h3>
+
+          <ul class="space-y-4 text-[#3C2C8C]">
+
+            <li>✓ Unity Game Development</li>
+            <li>✓ 2D Game Development</li>
+            <li>✓ Gameplay Mechanics</li>
+            <li>✓ UI / UX in Unity</li>
+            <li>✓ Game Physics</li>
+            <li>✓ Player Controls & AI</li>
+
+          </ul>
+
+        </div>
+
+
+        <!-- Tools -->
+
+        <div class="bg-white rounded-3xl p-8 shadow-lg">
+
+          <h3 class="text-2xl font-bold mb-6">
+            🛠 Tools & Concepts
+          </h3>
+
+          <ul class="space-y-4 text-[#3C2C8C]">
+
+            <li>✓ Unity</li>
+            <li>✓ Git & GitHub</li>
+            <li>✓ Object-Oriented Programming</li>
+            <li>✓ Data Structures & Algorithms</li>
+            <li>✓ Software Engineering Principles</li>
+            <li>✓ Unity UI Systems</li>
+
+          </ul>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ================= PROFESSIONAL EXPERIENCE ================= -->
+
+  <section id="experience"
+    class="py-24 px-6">
+
+    <div class="max-w-6xl mx-auto">
+
+      <div class="text-center mb-14">
+
+        <p
+          class="text-sm font-semibold uppercase tracking-widest text-[#4ADE80] mb-3">
+
+          Professional Experience
+
+        </p>
+
+        <h2
+          class="text-4xl md:text-5xl font-bold mb-5">
+
+          Professional Unity Work
+
+        </h2>
+
+        <p
+          class="max-w-2xl mx-auto text-[#3C2C8C] text-lg">
+
+          A selection of interactive Unity work developed
+          as part of my professional game development experience.
+
+        </p>
+
+      </div>
+
+
+      <!-- VACCINE PROJECT -->
+
+      <div
+        class="bg-white rounded-3xl overflow-hidden shadow-xl project-card">
+
+        <div class="grid lg:grid-cols-2">
+
+
+          <!-- VIDEO / IMAGE -->
+
+          <div class="relative min-h-[350px] bg-[#1E1B4B] flex items-center justify-center overflow-hidden">
+
+            <img
+              src="Assets/vaccine-project.png"
+              alt="Vaccine Education Game"
+              class="absolute inset-0 w-full h-full object-cover opacity-80">
+
+            <div
+              class="absolute inset-0 bg-[#1E1B4B]/50">
+            </div>
+
+
+            <!-- PLAY BUTTON -->
+
+            <button
+              onclick="openVideo('Assets/vaccine-demo.mp4')"
+              class="relative z-10 w-24 h-24 rounded-full bg-white text-[#1E1B4B] flex items-center justify-center text-4xl shadow-2xl hover:scale-110 transition">
+
+              ▶
+
+            </button>
+
+
+            <div
+              class="absolute bottom-6 left-6 z-10">
+
+              <span
+                class="px-4 py-2 bg-[#1E1B4B] text-[#4ADE80] rounded-full text-sm font-semibold">
+
+                ⭐ Professional Work • 1 Year Experience
+
+              </span>
+
+            </div>
+
+          </div>
+
+
+          <!-- PROJECT INFO -->
+
+          <div class="p-8 md:p-12">
+
+            <p
+              class="text-[#3C2C8C] text-sm font-semibold uppercase tracking-wider mb-2">
+
+              Professional Experience
+
+            </p>
+
+
+            <h3
+              class="text-3xl font-bold mb-5">
+
+              Vaccine Education & Interactive Games
+
+            </h3>
+
+
+            <p
+              class="text-[#3C2C8C] leading-relaxed mb-6">
+
+              A professional Unity-based educational project
+              featuring multiple interactive mini-games designed
+              around vaccine awareness and learning. I contributed
+              to the development of gameplay mechanics, interactive
+              systems and UI for multiple parts of the project.
+
+            </p>
+
+
+            <!-- MINI GAMES -->
+
+            <h4
+              class="font-bold text-lg mb-4">
+
+              Mini-Games
+
+            </h4>
+
+            <div class="grid sm:grid-cols-2 gap-3 mb-7">
+
+              <div
+                class="p-4 rounded-xl bg-[#E6E0F8]">
+
+                <strong>01.</strong>
+                Carrier Packing
+
+              </div>
+
+              <div
+                class="p-4 rounded-xl bg-[#E6E0F8]">
+
+                <strong>02.</strong>
+                Myth Buster
+
+              </div>
+
+              <div
+                class="p-4 rounded-xl bg-[#E6E0F8]">
+
+                <strong>03.</strong>
+                Heat and Repeat
+
+              </div>
+
+              <div
+                class="p-4 rounded-xl bg-[#E6E0F8]">
+
+                <strong>04.</strong>
+                Cold Chain Inspector
+
+              </div>
+
+            </div>
+
+
+            <!-- CONTRIBUTION -->
+
+            <h4
+              class="font-bold text-lg mb-3">
+
+              My Contribution
+
+            </h4>
+
+            <ul
+              class="space-y-2 text-[#3C2C8C] mb-7">
+
+              <li>✓ Unity gameplay development</li>
+              <li>✓ Gameplay mechanics and interactions</li>
+              <li>✓ UI implementation</li>
+              <li>✓ Interactive mini-game systems</li>
+              <li>✓ Debugging and gameplay improvements</li>
+
+            </ul>
+
+
+            <!-- TECHNOLOGIES -->
+
+            <div class="flex flex-wrap gap-2">
+
+              <span class="px-4 py-2 bg-[#1E1B4B] text-white rounded-full text-sm">
+                Unity
+              </span>
+
+              <span class="px-4 py-2 bg-[#1E1B4B] text-white rounded-full text-sm">
+                C#
+              </span>
+
+              <span class="px-4 py-2 bg-[#1E1B4B] text-white rounded-full text-sm">
+                Gameplay
+              </span>
+
+              <span class="px-4 py-2 bg-[#1E1B4B] text-white rounded-full text-sm">
+                UI
+              </span>
+
+              <span class="px-4 py-2 bg-[#1E1B4B] text-white rounded-full text-sm">
+                Educational Games
+              </span>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ================= PERSONAL PROJECTS ================= -->
+
+  <section id="projects"
+    class="py-24 px-6 bg-white/30">
+
+    <div class="max-w-6xl mx-auto">
+
+      <div class="text-center mb-14">
+
+        <p
+          class="text-sm font-semibold uppercase tracking-widest text-[#4ADE80] mb-3">
+
+          Personal Projects
+
+        </p>
+
+        <h2
+          class="text-4xl md:text-5xl font-bold">
+
+          Game Projects
+
+        </h2>
+
+      </div>
+
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+
+        <!-- PROJECT 1 -->
+
+        <div
+          class="bg-white rounded-3xl overflow-hidden shadow-lg project-card">
+
+          <img
+            src="Assets/game-1.png"
+            alt="Pixel Adventure"
+            class="w-full h-52 object-cover">
+
           <div class="p-6">
-            <h4 class="text-lg font-semibold text-[#1E1B4B]">Pixel Adventure</h4>
-            <p class="text-[#3C2C8C] text-sm mt-2">A fun 2D platformer where the player jumps, runs, and collects cherries while overcoming obstacles.</p>
-            <p class="text-[#6B5DAA] text-xs mt-2">Tech: Unity, C#</p>
+
+            <h3 class="text-2xl font-bold mb-3">
+              Pixel Adventure
+            </h3>
+
+            <p class="text-[#3C2C8C] mb-5">
+              A 2D platformer game focused on player
+              movement, level design and interactive gameplay.
+            </p>
+
+            <div class="flex flex-wrap gap-2">
+
+              <span class="px-3 py-1 bg-[#E6E0F8] rounded-full text-sm">
+                Unity
+              </span>
+
+              <span class="px-3 py-1 bg-[#E6E0F8] rounded-full text-sm">
+                C#
+              </span>
+
+              <span class="px-3 py-1 bg-[#E6E0F8] rounded-full text-sm">
+                2D
+              </span>
+
+            </div>
+
           </div>
-        </div>
-        
-        <div class="bg-[#D8D0F5] rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition transform hover:-translate-y-3">
-          <img src="Assets/game-2.png" alt="2D Racing Game" class="w-full h-40 object-cover">
-          <div class="p-4">
-            <h4 class="text-lg font-semibold text-[#1E1B4B]">Top-Down Racing Game</h4>
-            <p class="text-[#3C2C8C] text-sm mt-2">Outsmart AI drivers, avoid obstacles, and cross the finish line first.</p>
-            <p class="text-[#6B5DAA] text-xs mt-2">Tech: Unity, C#</p>
-          </div>
-        </div>
-        <div class="bg-[#D8D0F5] rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition transform hover:-translate-y-3">
-         <img src="Assets/game-4.jpg" alt="Memory Puzzle" class="w-full h-40 object-cover">
-          <div class="p-4">
-            <h4 class="text-lg font-semibold text-gray-800">Memory Puzzle</h4>
-            <p class="text-gray-600 text-sm mt-2">A card-matching puzzle game testing memory and focus skills.</p>
-            <p class="text-gray-500 text-xs mt-2">Tech: Unity, C#</p>
-          </div>
+
         </div>
 
-        <div class="bg-[#D8D0F5] rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition transform hover:-translate-y-3">
-          <img src="Assets/game-3.png" alt="Space Shooter" class="w-full h-40 object-cover">
-          <div class="p-4">
-            <h4 class="text-lg font-semibold text-gray-800">Space Shooter</h4>
-            <p class="text-gray-600 text-sm mt-2">A classic arcade-style shooter with enemies, power-ups, and scoring system.</p>
-            <p class="text-gray-500 text-xs mt-2">Tech: Unity, C#</p>
+
+        <!-- PROJECT 2 -->
+
+        <div
+          class="bg-white rounded-3xl overflow-hidden shadow-lg project-card">
+
+          <img
+            src="Assets/game-2.png"
+            alt="Top Down Racing"
+            class="w-full h-52 object-cover">
+
+          <div class="p-6">
+
+            <h3 class="text-2xl font-bold mb-3">
+              Top-Down Racing
+            </h3>
+
+            <p class="text-[#3C2C8C] mb-5">
+              A top-down racing game featuring vehicle
+              controls, racing mechanics and track gameplay.
+            </p>
+
+            <div class="flex flex-wrap gap-2">
+
+              <span class="px-3 py-1 bg-[#E6E0F8] rounded-full text-sm">
+                Unity
+              </span>
+
+              <span class="px-3 py-1 bg-[#E6E0F8] rounded-full text-sm">
+                C#
+              </span>
+
+              <span class="px-3 py-1 bg-[#E6E0F8] rounded-full text-sm">
+                Racing
+              </span>
+
+            </div>
+
           </div>
+
         </div>
 
-        <div class="bg-[#D8D0F5] rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition transform hover:-translate-y-3">
-          <img src="Assets/game-5.png" alt="Slide Number Puzzle" class="w-full h-40 object-cover">
-          <div class="p-4">
-            <h4 class="text-lg font-semibold text-gray-800">Slide Number Puzzle</h4>
-            <p class="text-gray-600 text-sm mt-2">A 15-puzzle style sliding game with state-saving and smooth UI.</p>
-            <p class="text-gray-500 text-xs mt-2">Tech: Unity, C#</p>
+
+        <!-- PROJECT 3 -->
+
+        <div
+          class="bg-white rounded-3xl overflow-hidden shadow-lg project-card">
+
+          <img
+            src="Assets/game-4.jpg"
+            alt="Memory Puzzle"
+            class="w-full h-52 object-cover">
+
+          <div class="p-6">
+
+            <h3 class="text-2xl font-bold mb-3">
+              Memory Puzzle
+            </h3>
+
+            <p class="text-[#3C2C8C] mb-5">
+              A memory-based puzzle game focused on
+              matching mechanics and interactive UI.
+            </p>
+
+            <div class="flex flex-wrap gap-2">
+
+              <span class="px-3 py-1 bg-[#E6E0F8] rounded-full text-sm">
+                Unity
+              </span>
+
+              <span class="px-3 py-1 bg-[#E6E0F8] rounded-full text-sm">
+                C#
+              </span>
+
+              <span class="px-3 py-1 bg-[#E6E0F8] rounded-full text-sm">
+                Puzzle
+              </span>
+
+            </div>
+
           </div>
+
         </div>
+
+
+        <!-- PROJECT 4 -->
+
+        <div
+          class="bg-white rounded-3xl overflow-hidden shadow-lg project-card">
+
+          <img
+            src="Assets/game-3.png"
+            alt="Space Shooter"
+            class="w-full h-52 object-cover">
+
+          <div class="p-6">
+
+            <h3 class="text-2xl font-bold mb-3">
+              Space Shooter
+            </h3>
+
+            <p class="text-[#3C2C8C] mb-5">
+              A 2D shooter featuring player controls,
+              enemies, shooting mechanics and score systems.
+            </p>
+
+            <div class="flex flex-wrap gap-2">
+
+              <span class="px-3 py-1 bg-[#E6E0F8] rounded-full text-sm">
+                Unity
+              </span>
+
+              <span class="px-3 py-1 bg-[#E6E0F8] rounded-full text-sm">
+                C#
+              </span>
+
+              <span class="px-3 py-1 bg-[#E6E0F8] rounded-full text-sm">
+                2D
+              </span>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <!-- PROJECT 5 -->
+
+        <div
+          class="bg-white rounded-3xl overflow-hidden shadow-lg project-card">
+
+          <img
+            src="Assets/game-5.png"
+            alt="Slide Number Puzzle"
+            class="w-full h-52 object-cover">
+
+          <div class="p-6">
+
+            <h3 class="text-2xl font-bold mb-3">
+              Slide Number Puzzle
+            </h3>
+
+            <p class="text-[#3C2C8C] mb-5">
+              A number puzzle game based on tile movement,
+              logical thinking and interactive gameplay.
+            </p>
+
+            <div class="flex flex-wrap gap-2">
+
+              <span class="px-3 py-1 bg-[#E6E0F8] rounded-full text-sm">
+                Unity
+              </span>
+
+              <span class="px-3 py-1 bg-[#E6E0F8] rounded-full text-sm">
+                C#
+              </span>
+
+              <span class="px-3 py-1 bg-[#E6E0F8] rounded-full text-sm">
+                Puzzle
+              </span>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
       </div>
+
     </div>
+
   </section>
 
-  <!-- Resume -->
-  <section id="resume" class="py-20 bg-[#D8D0F5] text-center">
-    <h3 class="text-4xl font-bold mb-6 text-[#1E1B4B]">Resume</h3>
-    <p class="text-[#3C2C8C] mb-6">Click below to view or download my resume.</p>
-    <a href="Assets/Diya.pdf" target="_blank" 
-       class="bg-gradient-to-r from-[#4ADE80] to-[#1E1B4B] hover:from-[#6CFFA0] hover:to-[#2C1A5B] text-[#E6E0F8] px-8 py-3 rounded-full shadow-lg transition transform hover:scale-110">
-       📄 View Resume
-    </a>
+
+  <!-- ================= FYP ================= -->
+
+  <section id="fyp"
+    class="py-24 px-6">
+
+    <div class="max-w-5xl mx-auto text-center">
+
+      <p
+        class="text-sm font-semibold uppercase tracking-widest text-[#4ADE80] mb-3">
+
+        Academic Project
+
+      </p>
+
+      <h2
+        class="text-4xl md:text-5xl font-bold mb-6">
+
+        Final Year Project
+
+      </h2>
+
+      <p
+        class="text-lg text-[#3C2C8C] max-w-3xl mx-auto mb-10">
+
+        A Unity-based collection of six mini-games developed
+        as my Final Year Project, giving me hands-on experience
+        with different gameplay mechanics and interactive systems.
+
+      </p>
+
+
+      <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-5 text-left">
+
+        <div class="bg-white p-5 rounded-2xl shadow">
+          🏎️ 2D Arcade Racing
+        </div>
+
+        <div class="bg-white p-5 rounded-2xl shadow">
+          🏃 Simple 2D Runner
+        </div>
+
+        <div class="bg-white p-5 rounded-2xl shadow">
+          🧩 Puzzle Game
+        </div>
+
+        <div class="bg-white p-5 rounded-2xl shadow">
+          🎈 Balloon Shooter
+        </div>
+
+        <div class="bg-white p-5 rounded-2xl shadow">
+          🚀 Space Shooter
+        </div>
+
+        <div class="bg-white p-5 rounded-2xl shadow">
+          🎮 Mini Game
+        </div>
+
+      </div>
+
+    </div>
+
   </section>
 
-  <!-- Contact -->
-  <section id="contact" class="bg-[#1E1B4B] text-[#E6E0F8] py-20 text-center">
-    <h3 class="text-4xl font-bold mb-6">Contact Me</h3>
-    <p class="text-[#C4BDF5] mb-6">Let’s connect and collaborate!</p>
-    <p class="mb-2">📧 <a href="mailto:diyanabiha99@gmail.com" class="text-[#4ADE80] hover:underline">diyanabiha99@gmail.com</a></p>
-    <p class="mb-2">🔗 <a href="https://pk.linkedin.com/in/diya-nabiha-2a9127379" class="text-[#4ADE80] hover:underline">LinkedIn</a></p>
-    <p>💬 <a href="https://wa.me/923287072588" class="text-[#4ADE80] hover:underline">WhatsApp</a></p>
+
+  <!-- ================= RESUME ================= -->
+
+  <section id="resume"
+    class="py-24 px-6 bg-white/30">
+
+    <div class="max-w-4xl mx-auto text-center">
+
+      <p
+        class="text-sm font-semibold uppercase tracking-widest text-[#4ADE80] mb-3">
+
+        Resume
+
+      </p>
+
+      <h2
+        class="text-4xl md:text-5xl font-bold mb-6">
+
+        My Resume
+
+      </h2>
+
+      <p
+        class="text-lg text-[#3C2C8C] mb-8">
+
+        Interested in my experience and skills?
+        You can view or download my resume below.
+
+      </p>
+
+      <a
+        href="Assets/Diya.pdf"
+        target="_blank"
+        class="inline-block px-8 py-4 bg-[#1E1B4B] text-white rounded-full font-semibold hover:bg-[#3C2C8C] transition">
+
+        📄 View Resume
+
+      </a>
+
+    </div>
+
   </section>
+
+
+  <!-- ================= CONTACT ================= -->
+
+  <section id="contact"
+    class="py-24 px-6">
+
+    <div class="max-w-4xl mx-auto text-center">
+
+      <p
+        class="text-sm font-semibold uppercase tracking-widest text-[#4ADE80] mb-3">
+
+        Contact
+
+      </p>
+
+      <h2
+        class="text-4xl md:text-5xl font-bold mb-6">
+
+        Let's Connect
+
+      </h2>
+
+      <p
+        class="text-lg text-[#3C2C8C] mb-10">
+
+        Interested in working together or discussing
+        a game development opportunity? Feel free to reach out.
+
+      </p>
+
+
+      <div class="flex flex-col sm:flex-row justify-center gap-5">
+
+
+        <!-- EMAIL -->
+
+        <a
+          href="mailto:diya@example.com"
+          class="px-6 py-4 bg-white rounded-2xl shadow hover:shadow-xl transition">
+
+          📧 Email
+
+        </a>
+
+
+        <!-- LINKEDIN -->
+
+        <a
+          href="https://www.linkedin.com/in/diya-nabiha/"
+          target="_blank"
+          class="px-6 py-4 bg-white rounded-2xl shadow hover:shadow-xl transition">
+
+          💼 LinkedIn
+
+        </a>
+
+
+        <!-- WHATSAPP -->
+
+        <a
+          href=""https://wa.me/923287072588"
+          target="_blank"
+          class="px-6 py-4 bg-white rounded-2xl shadow hover:shadow-xl transition">
+
+          💬 WhatsApp
+
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ================= FOOTER ================= -->
+
+  <footer
+    class="py-8 bg-[#1E1B4B] text-white text-center">
+
+    <p>
+      © 2026 Diya Nabiha. Unity Game Developer.
+    </p>
+
+    <p class="text-sm text-gray-300 mt-2">
+      1 Year Professional Game Development Experience
+    </p>
+
+  </footer>
+
+
+  <!-- ================= VIDEO MODAL ================= -->
+
+  <div
+    id="videoModal"
+    class="fixed inset-0 z-[100] hidden items-center justify-center video-overlay px-5">
+
+    <div
+      class="relative w-full max-w-5xl bg-black rounded-2xl overflow-hidden shadow-2xl">
+
+
+      <!-- CLOSE BUTTON -->
+
+      <button
+        onclick="closeVideo()"
+        class="absolute top-4 right-4 z-20 w-10 h-10 rounded-full bg-white text-black text-xl font-bold hover:bg-gray-200">
+
+        ✕
+
+      </button>
+
+
+      <!-- VIDEO -->
+
+      <video
+        id="projectVideo"
+        controls
+        class="w-full max-h-[80vh]">
+
+        <source
+          id="videoSource"
+          src=""
+          type="video/mp4">
+
+        Your browser does not support the video tag.
+
+      </video>
+
+    </div>
+
+  </div>
+
+
+  <!-- ================= JAVASCRIPT ================= -->
+
+  <script>
+
+    function openVideo(videoPath) {
+
+      const modal = document.getElementById("videoModal");
+      const video = document.getElementById("projectVideo");
+      const source = document.getElementById("videoSource");
+
+      source.src = videoPath;
+
+      video.load();
+
+      modal.classList.remove("hidden");
+      modal.classList.add("flex");
+
+      video.play();
+
+      document.body.style.overflow = "hidden";
+    }
+
+
+    function closeVideo() {
+
+      const modal = document.getElementById("videoModal");
+      const video = document.getElementById("projectVideo");
+
+      video.pause();
+
+      video.currentTime = 0;
+
+      modal.classList.add("hidden");
+      modal.classList.remove("flex");
+
+      document.body.style.overflow = "auto";
+    }
+
+
+    // Close video with ESC
+
+    document.addEventListener("keydown", function (event) {
+
+      if (event.key === "Escape") {
+
+        closeVideo();
+
+      }
+
+    });
+
+
+    // Close when clicking outside video
+
+    document.getElementById("videoModal")
+      .addEventListener("click", function (event) {
+
+        if (event.target === this) {
+
+          closeVideo();
+
+        }
+
+      });
+
+  </script>
+
 
 </body>
+
 </html>
+```
