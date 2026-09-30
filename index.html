@@ -1,4 +1,3 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
 
@@ -93,6 +92,18 @@
 
     .play-button:hover {
       transform: scale(1.12);
+    }
+
+    /* Clickable mini-game cards */
+
+    .mini-game-button {
+      transition: all 0.3s ease;
+    }
+
+    .mini-game-button:hover {
+      transform: translateY(-4px);
+      background: #C4BDF5;
+      box-shadow: 0 10px 25px rgba(30, 27, 75, 0.12);
     }
   </style>
 </head>
@@ -725,8 +736,11 @@
               class="grid sm:grid-cols-2 gap-3 mb-7">
 
 
-              <div
-                class="bg-[#E6E0F8] rounded-xl p-4">
+              <!-- Carrier Packing -->
+
+              <button
+                onclick="openVideo('Assets/carrier-packing.mp4')"
+                class="mini-game-button text-left bg-[#E6E0F8] rounded-xl p-4 cursor-pointer">
 
                 <span class="text-[#4ADE80] font-bold">
                   01
@@ -736,11 +750,22 @@
                   Carrier Packing
                 </span>
 
-              </div>
+                <span
+                  class="block text-xs text-[#6B5DAA] mt-1 ml-8">
+
+                  ▶ Watch Demo
+
+                </span>
+
+              </button>
 
 
-              <div
-                class="bg-[#E6E0F8] rounded-xl p-4">
+
+              <!-- Myth Buster -->
+
+              <button
+                onclick="openVideo('Assets/myth-buster.mp4')"
+                class="mini-game-button text-left bg-[#E6E0F8] rounded-xl p-4 cursor-pointer">
 
                 <span class="text-[#4ADE80] font-bold">
                   02
@@ -750,11 +775,22 @@
                   Myth Buster
                 </span>
 
-              </div>
+                <span
+                  class="block text-xs text-[#6B5DAA] mt-1 ml-8">
+
+                  ▶ Watch Demo
+
+                </span>
+
+              </button>
 
 
-              <div
-                class="bg-[#E6E0F8] rounded-xl p-4">
+
+              <!-- Heat and Repeat -->
+
+              <button
+                onclick="openVideo('Assets/heat-and-repeat.mp4')"
+                class="mini-game-button text-left bg-[#E6E0F8] rounded-xl p-4 cursor-pointer">
 
                 <span class="text-[#4ADE80] font-bold">
                   03
@@ -764,11 +800,22 @@
                   Heat and Repeat
                 </span>
 
-              </div>
+                <span
+                  class="block text-xs text-[#6B5DAA] mt-1 ml-8">
+
+                  ▶ Watch Demo
+
+                </span>
+
+              </button>
 
 
-              <div
-                class="bg-[#E6E0F8] rounded-xl p-4">
+
+              <!-- Cold Chain Inspector -->
+
+              <button
+                onclick="openVideo('Assets/cold-chain-inspector.mp4')"
+                class="mini-game-button text-left bg-[#E6E0F8] rounded-xl p-4 cursor-pointer">
 
                 <span class="text-[#4ADE80] font-bold">
                   04
@@ -778,7 +825,15 @@
                   Cold Chain Inspector
                 </span>
 
-              </div>
+                <span
+                  class="block text-xs text-[#6B5DAA] mt-1 ml-8">
+
+                  ▶ Watch Demo
+
+                </span>
+
+              </button>
+
 
             </div>
 
@@ -1695,4 +1750,3 @@
 </body>
 
 </html>
-```
